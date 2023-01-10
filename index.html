@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curriculum vitae</title>
+</head>
+<body>
+    <h1>curriculum vitae</h1>
+
+    <section>
+        <h3>datos personales</h3>
+       
+        <p id="datos"></p>
+
+        <script>
+            const persona = '{"nombre":"Cristian Hernan", "apellido":"Schuddekopf", "edad":28, "documento":38392997, "nacimiendo":"1994-10-31", "lugardenacimiento":"Tigre", "nacionalidad":"Argentino", "celular":1126174087, "email":"crisschude@gmail.com", "dirección":"Caracas 813, Gral.Pacheco, Tigre, Buenos Aires", "cod.post":1617}'
+            const obj = JSON.parse(persona);
+            obj.nacimiento = new Date(obj.nacimiento);
+            document.getElementById("datos").innerHTML = "Nombre: "+obj.nombre + "," + obj.apellido + "," + obj.edad + "," + obj.documento + "," + obj.nacimiento;
+        </script>
+    </section>
+
+    <script src="js/funciones.js"></script>
+</body>
+</html>
