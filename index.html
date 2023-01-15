@@ -10,18 +10,31 @@
     <h1>curriculum vitae</h1>
 
     <section>
-        <h3>datos personales</h3>
+        <h2>datos personales</h2>
        
         <p id="datos"></p>
 
         <script>
-            const persona = '{"nombre":"Cristian Hernan", "apellido":"Schuddekopf", "edad":28, "documento":38392997, "nacimiendo":"1994-10-31", "lugardenacimiento":"Tigre", "nacionalidad":"Argentino", "celular":1126174087, "email":"crisschude@gmail.com", "dirección":"Caracas 813, Gral.Pacheco, Tigre, Buenos Aires", "cod.post":1617}'
+            const persona = '{"nombre":"Cristian Hernan", "apellido":"Schuddekopf", "edad":28, "documento":38392997, "nacimiento":"31/10/1994", "lugardenacimiento":"Tigre", "nacionalidad":"Argentino", "celular":1126174087, "email":"crisschude@gmail.com", "dirección":"Caracas 813, Gral.Pacheco, Tigre, Buenos Aires", "cod.post":1617}'
             const obj = JSON.parse(persona);
-            obj.nacimiento = new Date(obj.nacimiento);
-            document.getElementById("datos").innerHTML = "Nombre: "+obj.nombre + "," + obj.apellido + "," + obj.edad + "," + obj.documento + "," + obj.nacimiento;
+            document.getElementById("datos").innerHTML = "Nombre: "+obj.nombre + "Apellido: " + obj.apellido + "Edad: " + obj.edad +"Documento: " + obj.documento + "Fecha de Nacimiento: " + obj.nacimiento + "Lugar de nacimiento: " + obj.lugardenacimiento + "Nacionalidad: "+ obj.nacionalidad + "Celular: " + obj.celular + "Email: " + obj.email + "Direccion: "+ obj.direccion;
+        </script>
+
+    </section>
+
+    <section>
+
+        <h2>Nivel de estudios</h2>
+
+        <p id="estudios"></p>
+
+        <script>
+            const estudio = '{"primaria":"completa", "secundario":"completo", "universidad":"cursando"}'
+            const obje = JSON.parse(estudio);
+            document.getElementById("estudios").innerHTML = "Primaria: " + obje.primaria + "Secundario: " + obje.secundario + "Universidad: " + obje.universidad;
         </script>
     </section>
 
     <script src="js/funciones.js"></script>
 </body>
-</html>
+</html> 
