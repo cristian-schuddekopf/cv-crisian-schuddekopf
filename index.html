@@ -5,35 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>curriculum vitae</title>
+    <link rel="stylesheet" href="">
 </head>
 <body>
-    <h1>curriculum vitae</h1>
+    <header>
+        <h1>curriculum vitae</h1>
+    </header>
+
+    <aside>
+        <img src="cristianschuddekopf.jpg" alt="la imagen no se puede cargar correctamente">
+    </aside>
 
     <section>
-        <h2>datos personales</h2>
+        <h2>Datos personales</h2>
        
         <p id="datos"></p>
 
         <script>
-            const persona = '{"nombre":"Cristian Hernan", "apellido":"Schuddekopf", "edad":28, "documento":38392997, "nacimiento":"31/10/1994", "lugardenacimiento":"Tigre", "nacionalidad":"Argentino", "celular":1126174087, "email":"crisschude@gmail.com", "dirección":"Caracas 813, Gral.Pacheco, Tigre, Buenos Aires", "cod.post":1617}'
+            const persona = '{"nombre":"Cristian Hernan", "apellido":"Schuddekopf", "edad":28, "documento":38392997, "nacimiento":"31/10/1994", "lugardenacimiento":"Tigre", "nacionalidad":"Argentina", "celular":1126174087, "email":"crisschude@gmail.com", "dirección":"Caracas 813, Gral.Pacheco, Tigre, Buenos Aires", "cod.post":1617}'
             const obj = JSON.parse(persona);
-            document.getElementById("datos").innerHTML = "Nombre: "+obj.nombre + "Apellido: " + obj.apellido + "Edad: " + obj.edad +"Documento: " + obj.documento + "Fecha de Nacimiento: " + obj.nacimiento + "Lugar de nacimiento: " + obj.lugardenacimiento + "Nacionalidad: "+ obj.nacionalidad + "Celular: " + obj.celular + "Email: " + obj.email + "Direccion: "+ obj.direccion;
+            document.getElementById("datos").innerHTML = "Nombre: " + obj.nombre + "Apellido: " + obj.apellido + "Edad: " + obj.edad +"Documento: " + obj.documento + "Fecha de Nacimiento: " + obj.nacimiento + "Lugar de nacimiento: " + obj.lugardenacimiento + "Nacionalidad: "+ obj.nacionalidad + "Celular: " + obj.celular + "Email: " + obj.email + "Direccion: "+ obj.direccion;
         </script>
 
-    </section>
+    </section> 
 
-    <section>
-
+    <article>
         <h2>Nivel de estudios</h2>
 
         <p id="estudios"></p>
 
         <script>
-            const estudio = '{"primaria":"completa", "secundario":"completo", "universidad":"cursando"}'
+            const estudio = '{"primaria":"completo", "secundario":"completo", "universidad":"cursando. U.T.N. FRGP, técnico universitario en programacion y sistemas informaticos"}'
             const obje = JSON.parse(estudio);
             document.getElementById("estudios").innerHTML = "Primaria: " + obje.primaria + "Secundario: " + obje.secundario + "Universidad: " + obje.universidad;
         </script>
-    </section>
+        <button id="nivel" type="submit" onclick="">VER NIVEL DE ESTUDIO</button>
+    </article>
+
+    <article>
+        <h2>Experiencia laboral</h2>
+
+        <p id="laboral1"></p>
+
+        <p id="laboral2"></p>
+        
+        <p id="laboral3"></p>
+
+        <script>
+            const lideres = '{"trabajo1":"LIDERES CONSULTORES DE SEGURIDAD S.R.L.", "tareas1":"vigilador general", "inicio1":"desde11/2020", "hasta1":"actualidad"}'
+            const objli = JSON.parse(lideres);
+            document.getElementById("laboral1").innerHTML = "" + objli.trabajo1 + "TAREAS REALIZADAZ: " + objli.tareas1 + "INICIO: " + objli.inicio1 + "HASTA:" + objli.hasta1;
+
+            const murata = '{"trabajo2":"MURATA S.A.", "tareas2":"vigilador general", "inicio2":"desde 03/2018", "hasta2":"11/2020"}'
+            const objmu = JSON.parse(murata);
+            document.getElementById("laboral2").innerHTML = "" + objmu.trabajo2 + "TAREAS REALIZADAZ: " + objmu.tareas2 + "INICIO: " + objmu.inicio2 + "HASTA:" + objmu.hasta2;
+
+            const cleantech = '{"trabajo3":"CLEANTECH", "tareas3":"Encargado de recepción en sector depósito y Encargado de producción en sector empaque planificando las tareas a realizar y a cargo de 8 personas", "inicio3":"desde 06/2017", "hasta3":"02/2018"}'
+            const objcle = JSON.parse(cleantech);
+            document.getElementById("laboral3").innerHTML = "" + objcle.trabajo3 + "TAREAS REALIZADAZ: " + objcle.tareas3 + "INICIO: " + objcle.inicio3 + "HASTA:" + objcle.hasta3;
+
+       </script>
+        <button id="trabajo" type="submit" onclick="">VER EXPERIENCIA LABORAL</button>
+    </article>
+   
+    <article>
+        <h2>Otros estudios</h2>
+
+        <p id="curso1"></p>
+        
+        <p id="curso2"></p>
+        
+        <p id="curso3"></p>
+        
+        <p id="curso4"></p>
+        
+        <p id="curso5"></p>
+
+        <script>
+            const frontend = '{"Cursos1":"Desarrollo de paginas web. frontend", "institución1":"Argentina programa", "desde1":"12/2022", "hasta1":"02/2023"}'
+            const objfr = JSON.parse(frontend);
+            document.getElementById("curso1").innerHTML = "" + objfr.Cursos1 + "Institución: " + objfr.institución1 + "Desde: " + objfr.desde1 + "Hasta: " + objfr.hasta1;
+            
+            const juezfutbol = '{"Cursos2":"Juez de futbol", "institución2":"Asociación argentina de árbitros", "desde2":"03/2015", "hasta2":"12/2016"}'
+            const objar = JSON.parse(juezfutbol);
+            document.getElementById("curso2").innerHTML = "" + objar.Cursos2 + "Institución: " + objar.institución2 + "Desde: " + objar.desde2 + "Hasta: " + objar.hasta2;
+            
+            const logistica = '{"Cursos3":"Formación personal certificado en logística", "institución3":"ARLOG", "desde3":"04/2014", "hasta3":"07/2014"}'
+            const objlog = JSON.parse(logistica);
+            document.getElementById("curso3").innerHTML = "" + objlog.Cursos3 + "Institución: " + objlog.institución3 + "Desde: " + objlog.desde3 + "Hasta: " + objlog.hasta3;
+            
+            const electricista = '{"Cursos4":"Montador electricista", "institución4":"C.A.I. (centro de apoyo integral) San Juan Bautista", "desde4":"03/2013", "hasta4":"12/2013"}'
+            const objelc = JSON.parse(electricista);
+            document.getElementById("curso4").innerHTML = "" + objelc.Cursos4 + "Institución: " + objelc.institución4 + "Desde: " + objelc.desde4 + "Hasta: " + objelc.hasta4;
+            
+            const operador = '{"Cursos5":"Operador de PC", "institución5":"C.A.I. (centro de apoyo integral) San Juan Bautista", "desde5":"03/2010", "hasta5":"12/2010"}'
+            const objop = JSON.parse(operador);
+            document.getElementById("curso5").innerHTML = "" + objop.Cursos5 + "Institución: " + objop.institución5 + "Desde: " + objop.desde5 + "Hasta: " + objop.hasta5;
+            
+        </script>
+        <button id="cursado" type="submit" onclick="">VER OTROS ESTUDIOS</button>
+    </article>
 
     <script src="js/funciones.js"></script>
 </body>
