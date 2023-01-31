@@ -1,0 +1,6 @@
+* {
+ box-sizing: border-box;
+}
+#class {
+    column-rule-style: double;
+}
